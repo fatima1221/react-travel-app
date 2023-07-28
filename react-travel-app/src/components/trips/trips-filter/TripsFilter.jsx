@@ -1,15 +1,16 @@
 import React from "react";
 import "./TripsFilter.css";
+import Input from "../../common/input/Input";
 
 export const TripsFilter = () => {
   return (
     <form className="trips-filter__form" autocomplete="off">
       <label className="trips-filter__search input">
         <span className="visually-hidden">Search by name</span>
-        <input
-          data-test-id="filter-search"
-          name="search"
+        <Input
+          dataTestId="filter-search"
           type="search"
+          name="search"
           placeholder="search by title"
         />
       </label>
