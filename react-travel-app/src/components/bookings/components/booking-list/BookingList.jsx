@@ -1,6 +1,6 @@
 import React from "react";
 import "./BookingList.css";
-import Booking from "./Booking";
+import Booking from "../booking/Booking";
 
 const BookingList = () => {
   return (

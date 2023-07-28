@@ -1,12 +1,13 @@
 import React from "react";
 import "./SignInUp.css";
-import Input from "./Input";
-import Button from "./Button";
+import { Link } from "react-router-dom";
+
+import Input from "../common/input/Input";
+import Button from "../common/button/Button";
 
 const SignIn = () => {
   const handleSignIn = (event) => {
     event.preventDefault();
-    // Handle sign-in logic here
   };
 
   return (
@@ -14,25 +15,33 @@ const SignIn = () => {
       <h1 className="visually-hidden">Travel App</h1>
       <form className="sign-in-form" autoComplete="off" onSubmit={handleSignIn}>
         <h2 className="sign-in-form__title">Sign In</h2>
-        <Input label="Email" type="email" name="email" required />
-        <Input
-          label="Password"
-          type="password"
-          name="password"
-          autoComplete="new-password"
-          required
-        />
+        <label class="input">
+          <span class="input__heading">Email</span>
+          <Input
+            dataTestId="auth-email"
+            type="email"
+            name="email"
+            required={true}
+          />
+        </label>
+
+        <label class="input">
+          <span class="input__heading">Password</span>
+          <Input
+            dataTestId="auth-password"
+            type="password"
+            name="password"
+            required={true}
+          />
+        </label>
+
         <Button label="Sign In" />
       </form>
       <span>
         Don't have an account?
-        <a
-          data-testid="auth-sign-up-link"
-          href="./sign-up.html"
-          className="sign-in-form__link"
-        >
+        <Link to="/sign-up" className="sign-in-form__link">
           Sign Up
-        </a>
+        </Link>
       </span>
     </main>
   );
