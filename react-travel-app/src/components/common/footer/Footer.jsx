@@ -3,14 +3,14 @@ import heart from "../../../assets/images/heart.svg";
 import "./Footer.css";
 
 export const Footer = () => (
-  <footer class="footer">
-    <span class="footer__text">
+  <footer className="footer">
+    <span className="footer__text">
       from
-      <a class="footer__link" href="https://binary-studio.com">
+      <a className="footer__link" href="https://binary-studio.com">
         binary studio
       </a>
       with
-      <img class="footer__icon" src={heart} alt="heart" />
+      <img className="footer__icon" src={heart} alt="heart" />
     </span>
   </footer>
 );

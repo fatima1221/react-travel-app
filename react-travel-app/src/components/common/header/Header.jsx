@@ -4,46 +4,50 @@ import user from "../../../assets/images/user.svg";
 import bookings from "../../../assets/images/briefcase.svg";
 
 export const Header = () => (
-  <header class="header">
-    <div class="header__inner">
-      <a data-test-id="header-logo" href="./index.html" class="header__logo">
+  <header className="header">
+    <div className="header__inner">
+      <a
+        data-test-id="header-logo"
+        href="./index.html"
+        className="header__logo"
+      >
         Travel App
       </a>
-      <nav data-test-id="header-nav" class="header__nav">
-        <ul class="nav-header__list">
-          <li class="nav-header__item" title="Bookings">
+      <nav data-test-id="header-nav" className="header__nav">
+        <ul className="nav-header__list">
+          <li className="nav-header__item" title="Bookings">
             <a
               data-test-id="header-bookings-link"
               href="./bookings.html"
-              class="nav-header__inner"
+              className="nav-header__inner"
             >
-              <span class="visually-hidden">Bookings</span>
+              <span className="visually-hidden">Bookings</span>
               <img src={bookings} alt="bookings" />
             </a>
           </li>
-          <li class="nav-header__item" title="Profile">
+          <li className="nav-header__item" title="Profile">
             <div
               data-test-id="header-profile-nav"
-              class="nav-header__inner profile-nav"
+              className="nav-header__inner profile-nav"
               tabindex="0"
             >
-              <span class="visually-hidden">Profile</span>
+              <span className="visually-hidden">Profile</span>
               <img src={user} alt="profile" />
               <ul
                 data-test-id="header-profile-nav-list"
-                class="profile-nav__list"
+                className="profile-nav__list"
               >
                 <li
                   data-test-id="header-profile-nav-username"
-                  class="profile-nav__item profile-nav__username"
+                  className="profile-nav__item profile-nav__username"
                 >
                   John Doe
                 </li>
-                <li class="profile-nav__item">
+                <li className="profile-nav__item">
                   <a
                     data-test-id="header-profile-nav-sign-out"
                     href="./sign-in.html"
-                    class="profile-nav__sign-out button"
+                    className="profile-nav__sign-out button"
                   >
                     Sign Out
                   </a>
