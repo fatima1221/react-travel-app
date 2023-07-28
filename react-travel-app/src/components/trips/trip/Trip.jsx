@@ -2,8 +2,15 @@ import React from "react";
 import tripImg from "../../../assets/images/iceland.jpg";
 import "./Trip.css";
 import Button from "../../common/button/Button";
+import { useHistory } from "react-router-dom";
 
 export const Trip = () => {
+  const history = useHistory();
+
+  const handleTripDisplay = () => {
+    history.push("/trip");
+  };
+
   return (
     <li data-test-id="trip-card" className="trip-card">
       <img data-test-id="trip-card-image" src={tripImg} alt="trip" />
@@ -34,7 +41,7 @@ export const Trip = () => {
           </strong>
         </div>
       </div>
-      <Button label={"Discover a trip"}></Button>
+      <Button onClick={handleTripDisplay} label={"Discover a trip"}></Button>
     </li>
   );
 };
