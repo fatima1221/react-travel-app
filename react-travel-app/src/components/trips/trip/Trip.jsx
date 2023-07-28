@@ -1,6 +1,7 @@
 import React from "react";
 import tripImg from "../../../assets/images/iceland.jpg";
 import "./Trip.css";
+import Button from "../../common/button/Button";
 
 export const Trip = () => {
   return (
@@ -33,9 +34,7 @@ export const Trip = () => {
           </strong>
         </div>
       </div>
-      <a data-test-id="trip-card-link" href="./trip.html" className="button">
-        Discover a trip
-      </a>
+      <Button label={"Discover a trip"}></Button>
     </li>
   );
 };

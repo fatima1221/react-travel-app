@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.css";
 import user from "../../../assets/images/user.svg";
 import bookings from "../../../assets/images/briefcase.svg";
+import Button from "../button/Button";
 
 export const Header = () => (
   <header className="header">
@@ -44,13 +45,10 @@ export const Header = () => (
                   John Doe
                 </li>
                 <li className="profile-nav__item">
-                  <a
-                    data-test-id="header-profile-nav-sign-out"
-                    href="./sign-in.html"
+                  <Button
+                    label={"Sign Out"}
                     className="profile-nav__sign-out button"
-                  >
-                    Sign Out
-                  </a>
+                  ></Button>
                 </li>
               </ul>
             </div>
